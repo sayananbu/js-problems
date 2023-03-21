@@ -13,7 +13,21 @@
  * @returns {number[]}
  */
 function union(a, b) {
-    return undefined;
+	let result = []
+	let arrA = []
+	let arrB = []
+	if(a.length>b.length){
+		arrA = b
+		arrB = a
+	}
+	else{
+		arrA = a
+		arrB = b
+	}
+	arrA.forEach(value=>{
+		if(arrB.includes(value)) result.push(value)
+	})
+    return result;
 }
 
 module.exports = union;
