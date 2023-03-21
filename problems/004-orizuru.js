@@ -19,7 +19,9 @@
  * второй элемент – Катей, третий – Сережей
  */
 function computeOrizurus(total) {
-    return undefined;
+	let kate = total % 2 === 0 ? (total*2)/3 : Math.ceil((total*2)/3)+1
+	let other = (total - kate)/2
+    return [other,kate,other];
 }
 
 module.exports = computeOrizurus;
