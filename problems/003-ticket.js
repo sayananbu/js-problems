@@ -14,12 +14,12 @@
  * @returns {boolean}
  */
 function checkTicket(number) {
-	let digits = number.spllit('')
+	let digits = number.split('')
 	let sum=0
 	digits.forEach(digit=>{
 		sum+= +digit
 	})
-    return sum % 2 === 0 ? true : false
+    return sum % 2 === 0 ? true : false 
 }
 
 module.exports = checkTicket;
