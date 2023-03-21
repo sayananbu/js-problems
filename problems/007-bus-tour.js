@@ -12,7 +12,11 @@
  * @returns {undefined|number}
  */
 function checkBusTour(bridges) {
-    return -1;
+	let bus = 512
+	for(let i = 0; i < bridges.length; i++){
+		if(bridge <= bus) return i+1
+	}
+    return undefined;
 }
 
 module.exports = checkBusTour;
