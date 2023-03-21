@@ -14,7 +14,12 @@
  * @returns {boolean}
  */
 function checkTicket(number) {
-    return undefined;
+	let digits = number.spllit('')
+	let sum=0
+	digits.forEach(digit=>{
+		sum+= +digit
+	})
+    return sum % 2 === 0 ? true : false
 }
 
 module.exports = checkTicket;
