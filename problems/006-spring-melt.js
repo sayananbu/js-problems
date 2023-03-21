@@ -18,6 +18,7 @@
  * @returns {number}
  */
 function getSpringMeltStreak(temperature) {
+	
     return undefined;
 }
 
