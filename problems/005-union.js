@@ -14,20 +14,34 @@
  */
 function union(a, b) {
 	let result = []
-	let arrA = []
-	let arrB = []
-	if(a.length>b.length){
-		arrA = b
-		arrB = a
-	}
-	else{
-		arrA = a
-		arrB = b
+	let arrA = removeDuplicates(a.sort(compareNumeric))
+	let arrB = removeDuplicates(b.sort(compareNumeric))
+	if(arrA.length>arrB.length){
+		let buf = arrA
+		arrA = arrB
+		arrB = buf
 	}
 	arrA.forEach(value=>{
 		if(arrB.includes(value)) result.push(value)
 	})
-    return result;
+    return result; 
 }
-
+let removeDuplicates = function(nums) {
+    if(nums.length<2) return nums;
+    for(let i = 0; i<nums.length; i++){
+		if(i+1<nums.length) {
+			let index = nums.indexOf(nums[i], i+1)
+			if(index>=0){
+				nums.splice(index,1)
+				i--
+			}
+		}
+    }
+	return nums;
+};
+function compareNumeric(a, b) {
+	if (a > b) return 1;
+	if (a == b) return 0;
+	if (a < b) return -1;
+  }
 module.exports = union;
