@@ -18,8 +18,28 @@
  * @returns {number}
  */
 function getSpringMeltStreak(temperature) {
-	
-    return undefined;
+	let period = 0
+	let count = 0
+	let sign = 1
+	temperature.forEach((value,index) => {
+		sign*=value
+		if(sign>0) count++
+		else{
+			if(count>period){
+				period=count
+				count = 0
+				sign = 1
+			}
+			else{
+				count = 0
+				sign = 1
+			}
+		}
+		if(index+1 === temperature.length){
+			if(count>period) period=count
+		}
+	})
+    return period;
 }
 
 module.exports = getSpringMeltStreak;
