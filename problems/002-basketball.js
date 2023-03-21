@@ -16,12 +16,13 @@
  * @returns {(number|undefined)}
  */
 function getWinner(points) {
-	let winner = 0;
+	let [first,second] = [0,0]
 	points.forEach(point=>{
-		let [left, right] = point.split('-')
-		winner+= +left > +right ? -1 : +left === +right ? 0 : 1;
-})
-    return winner > 0 ? 2 : winner === 0 ? undefined : 1
+		let [f,s] = point.split('-')
+		first+= +f
+		second+= +second
+	})
+    return first > second ? 1 : first === second ? undefined : 2
 }
-
+getWinner(['23-26', '24-30', '30-27', '35-31'])
 module.exports = getWinner;
