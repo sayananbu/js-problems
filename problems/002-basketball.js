@@ -20,9 +20,8 @@ function getWinner(points) {
 	points.forEach(point=>{
 		let [f,s] = point.split('-')
 		first+= +f
-		second+= +second
+		second+= +s
 	})
-    return first > second ? 1 : first === second ? undefined : 2
+    return first > second ? 1 : first === second ? undefined : 2 
 }
-getWinner(['23-26', '24-30', '30-27', '35-31'])
 module.exports = getWinner;
