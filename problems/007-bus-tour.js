@@ -14,9 +14,9 @@
 function checkBusTour(bridges) {
 	let bus = 512
 	for(let i = 0; i < bridges.length; i++){
-		if(bridge <= bus) return i+1
+		if(bridges[i] <= bus) return i+1
 	}
-    return undefined;
+    return undefined; 
 }
 
 module.exports = checkBusTour;
