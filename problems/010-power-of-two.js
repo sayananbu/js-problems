@@ -12,10 +12,13 @@
  * @returns {number|undefined}
  */
 function getPower(n) {
-	if(n < 1 && n % 2 !== 0) return undefined
+	if(n < 1 || (n > 1 && n % 2 !== 0)) return undefined
 	let power = 0
-	while(2**power !== n) power++
-    return power;
+	while(2**power !== n){
+		if(2**power>n) return undefined
+		power++
+	}
+    return power; 
 }
 
 module.exports = getPower;
