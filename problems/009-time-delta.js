@@ -17,7 +17,10 @@
  * @returns {number} разница между x и y в секундах
  */
 function getTimeDelta(x, y) {
-    return undefined;
+	let dx = x.split(':')
+	let dy = y.split(':')
+	let [h,m,s] = [dy[0]-dx[0],dy[1]-dx[1],dy[2]-dx[2]]
+    return h * 3600 + m * 60 + s;
 }
 
 module.exports = getTimeDelta;
