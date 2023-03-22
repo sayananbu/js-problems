@@ -17,10 +17,10 @@
 function anagram(x, y) {
 	if(x==='') return false
 	if(x.length !== y.length) return false
-	x = (x.toLowerCase()).split('').sort()
-	y = (y.toLowerCase()).split('').sort()
+	let dx = (x.toLowerCase()).split('').sort()
+	let dy = (y.toLowerCase()).split('').sort()
 	for (let i = 0; i < x.length; i++) {
-		if(x[i] !== y[i]) return false
+		if(dx[i] !== dy[i]) return false 
 	}
     return true
 }
