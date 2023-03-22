@@ -14,7 +14,16 @@
  * @returns {string}
  */
 function hexToRgb(color) {
-    return undefined;
+	let str = color.replace('#','')
+	let digits = str.length/3
+	let values = []
+	for (let i = 0; i < str.length; i+=digits) {
+		let subVal = Number.isNaN(+str.substring(i,digits+i)) ? str.substring(i,digits+i) : +str.substring(i,digits+i)
+		if(digits < 2){
+			subVal = Number.isNaN(+subVal) ? subVal.repeat(2) : subVal*11
+		}
+		values.push(parseInt(subVal,16))
+	}
+    return `rgb(${values[0]}, ${values[1]}, ${values[2]})`;
 }
-
 module.exports = hexToRgb;
