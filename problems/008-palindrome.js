@@ -13,8 +13,11 @@
  * @returns {boolean}
  */
 function isPalindrome(value) {
-	
-    return undefined;
+	for (let i = 0; i < Math.trunc(value.length/2); i++) {
+		if(value[i] !== value.at(-i-1))
+			return false
+	}
+    return true;
 }
 
 module.exports = isPalindrome;
