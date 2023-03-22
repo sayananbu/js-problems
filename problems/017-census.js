@@ -13,7 +13,15 @@
  * @returns {undefined|number}
  */
 function census(list) {
-    return -1;
+	let maxAge = 0
+	let position
+	list.forEach((person, index) => {
+		if(person.gender === 'Male' && person.age > maxAge){
+			maxAge = person.age
+			position=index+1
+		}
+	})
+    return position
 }
 
 module.exports = census;
