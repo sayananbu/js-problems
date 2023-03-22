@@ -15,45 +15,26 @@ function rle(value) {
 	let letter = value[0]
 	let arr = value.split('')
 	let result = []
+	const checkEnd = (arr,index) =>{
+		if(arr.length === index+1){
+			let str = count > 1 ? count+letter : letter
+			result.push(str)
+		}
+	}
 	for (let i = 0; i < arr.length; i++) {
-		if(item === letter){
+		if(arr[i] === letter){
 			count++
-			if(arr.length === index+1){
-				let str = count > 1 ? count+letter : letter
-				result.push(str)
-			}
+			checkEnd(arr,i)
 		} 
 		else{
 			let str = count > 1 ? count+letter : letter
 			result.push(str)
 			count = 1
-			letter = item
-			if(arr.length === index+1){
-				let str = count > 1 ? count+letter : letter
-				result.push(str)
-			}
+			letter = arr[i]
+			checkEnd(arr,i)
 		}
 		
 	}
-	// arr.forEach((item, index) => {
-	// 	if(item === letter){
-	// 		count++
-	// 		if(arr.length === index+1){
-	// 			let str = count > 1 ? count+letter : letter
-	// 			result.push(str)
-	// 		}
-	// 	} 
-	// 	else{
-	// 		let str = count > 1 ? count+letter : letter
-	// 		result.push(str)
-	// 		count = 1
-	// 		letter = item
-	// 		if(arr.length === index+1){
-	// 			let str = count > 1 ? count+letter : letter
-	// 			result.push(str)
-	// 		}
-	// 	}
-	// })
     return result.join('');
 }
 
