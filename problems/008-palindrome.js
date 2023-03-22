@@ -13,6 +13,7 @@
  * @returns {boolean}
  */
 function isPalindrome(value) {
+	
     return undefined;
 }
 
