@@ -19,7 +19,12 @@
  * @returns {boolean}
  */
 function isIpValid(address) {
-    return undefined;
+	let nums = address.split('.')
+	if(nums.length>4) return false
+	for(let num of nums){
+		if(!(+num >= 0 && +num <= 255)) return false
+	}
+    return true;
 }
 
 module.exports = isIpValid;
