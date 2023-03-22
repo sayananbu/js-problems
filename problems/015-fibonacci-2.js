@@ -14,7 +14,13 @@
  * @returns {undefined|number}
  */
 function isFibonacci(value) {
-    return undefined;
+	if(value<2 && value>=0) return value
+	let nums=[0,1]
+	for (let i = 2;; i++){
+		if(nums[nums.length-1] > value) return undefined
+		if(nums[nums.length-1] === value) return nums.length-1
+		nums.push(nums.at(i-1)+nums.at(i-2))
+	}
 }
 
 module.exports = isFibonacci;
