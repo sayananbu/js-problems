@@ -17,7 +17,7 @@
  * @returns {number}
  */
 function metro(x, y) {
-    return undefined;
+	let val = Math.abs(x-y)-1
+	return val < 13-val-2 ? val : 13-val-2
 }
-
 module.exports = metro;
