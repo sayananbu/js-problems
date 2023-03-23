@@ -20,16 +20,12 @@
 function getSpringMeltStreak(temperature) {
 	let period = 0
 	let count = 0
-	temperature.forEach((value,index) => {
-		if(value>0) count++
-		else{
-			if(count>period){
-				period=count
-				count = 0
-			}
-			else count = 0
+	temperature.forEach((value) => {
+		if(value>0){
+			count++
+			if(count>period) period=count
 		}
-		if(index+1 === temperature.length && count>period) period=count
+		else count = 0
 	})
     return period;
 }
