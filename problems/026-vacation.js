@@ -14,7 +14,11 @@
  * @returns {string}
  */
 function vacation(date) {
-    return undefined;
+	let parts = date.split('.').reverse()
+	let vac = new Date(parts[0],parts[1]-1,parts[2])
+	vac = new Date(+vac + 86400*14*1000)
+	let month = vac.getMonth()+1<10 ? '0'+(vac.getMonth()+1) : vac.getMonth()+1
+	let day = vac.getDate()<10 ? '0'+vac.getDate() : vac.getDate()
+	return `${day}.${month}.${vac.getFullYear()}`
 }
-
 module.exports = vacation;
