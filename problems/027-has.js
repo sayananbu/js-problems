@@ -13,7 +13,10 @@
  * @returns {boolean}
  */
 function has(path, object) {
-    return undefined;
+	object = object ?? {}
+	for(let key of path){
+		if(!(key in object) || 'prototype' in object) return false
+	}
+    return true
 }
-
 module.exports = has;
