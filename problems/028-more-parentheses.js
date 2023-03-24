@@ -12,7 +12,18 @@
  * @returns {boolean}
  */
 function parentheses(value) {
-    return undefined;
+	if(value.length<2) return false
+	let caracters = new Map([
+		['<','>'],
+		['{','}'],
+		['(',')']
+	])
+	let buffer = []
+	for (let i = 0; i < value.length; i++) {
+		if(caracters.get(buffer[buffer.length-1]) === value[i]) buffer.pop()
+		else buffer.push(value[i])
+	}
+    return buffer.length > 0 ? false : true;
 }
 
 module.exports = parentheses;
