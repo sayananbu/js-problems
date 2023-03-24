@@ -22,7 +22,27 @@
  * @returns {boolean}
  */
 function hasCircularDependency(servicesMap) {
-    return false;
+	let servicesValues = []
+	let fieldsNum = 0
+	for(let service in servicesMap){
+		servicesValues.push(...servicesMap[service])
+		fieldsNum++
+	}
+	removeDuplicates(servicesValues.sort())
+	if(servicesValues.length<fieldsNum || servicesValues.length<1) return false
+	return true
 }
-
+const removeDuplicates = function(nums){
+	if(nums.length<2) return nums;
+    for(let i = 0; i<nums.length; i++){
+		if(i+1<nums.length) {
+			let index = nums.indexOf(nums[i], i+1)
+			if(index>=0){
+				nums.splice(index,1)
+				i--
+			}
+		}
+    }
+	return nums;
+}
 module.exports = hasCircularDependency;
