@@ -13,10 +13,10 @@
  * @returns {boolean}
  */
 function has(path, object) {
-	object = object ?? {}
 	for(let key of path){
-		if(!(key in object) || 'prototype' in object) return false
+		let isIn = object != null && hasOwnProperty.call(object, key)
+		if(!isIn) return false
 	}
-    return true
+	return true
 }
 module.exports = has;
