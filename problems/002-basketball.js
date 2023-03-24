@@ -20,7 +20,7 @@ function getWinner(points) {
 	points.forEach(point=>{
 		let [f,s] = point.split('-')
 		first+= +f
-		second+= +s
+		second+= +s 
 	})
     return first > second ? 1 : first === second ? undefined : 2 
 }

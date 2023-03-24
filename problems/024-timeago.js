@@ -19,7 +19,7 @@ function timeago(seconds) {
 	let hours = seconds / 3600
 	let days = seconds / 86400
 	let weeks = seconds / 604800
-	let weeksLimit = 4
+	let weeksLimit = 4 
 	if( weeks >= weeksLimit) return 'undefined'
 	if(weeks>=2) return `${Math.floor(weeks)} weeks ago`
 	if(weeks>=1) return `1 week ago`

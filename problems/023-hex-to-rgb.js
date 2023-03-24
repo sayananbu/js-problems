@@ -9,7 +9,7 @@
  * hexToRgb('#000000') === 'rgb(0, 0, 0)'
  * hexToRgb('#fff') === 'rgb(255, 255, 255)'
  * hexToRgb('#800080') === 'rgb(128, 0, 128)'
- *
+ * 
  * @param {string} color
  * @returns {string}
  */

@@ -4,7 +4,7 @@
  *
  * Напишите функцию census(list) возвращающую номер в списке самого старшего жителя мужского пола.
  *
- * Пример:
+ * Пример: 
  *
  * census([{ age: 12, gender: 'Male' }, { age: 40, gender: 'Male' }]) === 2
  * census([{ age: 40, gender: 'Female' }]) === undefined

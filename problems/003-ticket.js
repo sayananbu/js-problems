@@ -17,7 +17,7 @@ function checkTicket(number) {
 	let digits = number.split('')
 	let sum=0
 	digits.forEach(digit=>{
-		sum+= +digit
+		sum+= +digit 
 	})
     return sum % 2 === 0 ? true : false 
 }

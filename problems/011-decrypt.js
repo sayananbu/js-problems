@@ -18,7 +18,7 @@
 function decrypt(secret, offset=1) {
 	secret=secret.toLocaleLowerCase()
 	let sentence = secret.split('')
-	let charcode = 0
+	let charcode = 0 
 	let result = ''
 	sentence.forEach((value, index) => {
 		if(value !== ' '){

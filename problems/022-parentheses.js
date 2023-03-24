@@ -11,7 +11,7 @@
  * parentheses('(()())') === true
  * parentheses('(()') === false
  * parentheses(')') === false
- *
+ * 
  * @param {string} value
  * @returns {boolean}
  */

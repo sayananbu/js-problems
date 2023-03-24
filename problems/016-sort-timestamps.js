@@ -7,7 +7,7 @@
  *
  * @param {string[]} list массив временных моментов представленных в виде строк в формате 'HH:MM:SS'
  * @returns {string[]} отсортированный по возрастанию массив временных моментов
- */
+ */ 
 function sortTimestamps(list) {
     return list.sort(compare);
 }

@@ -9,7 +9,7 @@
  * isFibonacci(2) === 3
  * isFibonacci(55) === 10
  * isFibonacci(52) === undefined
- *
+ * 
  * @param {number} value
  * @returns {undefined|number}
  */

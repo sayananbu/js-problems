@@ -8,7 +8,7 @@
  * isPalindrome('121') === true
  * isPalindrome('boob') === true
  * isPalindrome('true') === false
- *
+ * 
  * @param {string} value
  * @returns {boolean}
  */

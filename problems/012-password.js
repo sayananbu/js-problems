@@ -7,7 +7,7 @@
  * Напишите функцию validatePassword(password) определяющую,
  * является ли переданный пароль криптостойким.
  *
- * Пример:
+ * Пример: 
  *
  * validatePassword('abc4DEFG') === true
  * validatePassword('abcdefg') === false

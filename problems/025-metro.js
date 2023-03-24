@@ -11,7 +11,7 @@
  * metro(1, 3) === 1
  * metro(13, 1) === 0
  * metro(1, 13) === 0
- *
+ * 
  * @param {number} x – станция посадки
  * @param {number} y - станция высадки
  * @returns {number}

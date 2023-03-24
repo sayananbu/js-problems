@@ -25,6 +25,6 @@ function computeOrizurus(total) {
 		kate++
 		other--
 	}
-    return [other,kate,other]; 
+    return [other,kate,other];  
 }
 module.exports = computeOrizurus;

@@ -37,6 +37,6 @@ let removeDuplicates = function(nums) {
 			}
 		}
     }
-	return nums;
+	return nums; 
 };
 module.exports = union;
