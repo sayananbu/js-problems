@@ -14,8 +14,8 @@
  */
 function union(a, b) {
 	let result = []
-	let arrA = removeDuplicates(a.sort(compareNumeric))
-	let arrB = removeDuplicates(b.sort(compareNumeric))
+	let arrA = removeDuplicates(a.sort((a,b)=>a-b))
+	let arrB = removeDuplicates(b.sort((a,b)=>a-b))
 	if(arrA.length>arrB.length){
 		let buf = arrA
 		arrA = arrB
@@ -39,9 +39,5 @@ let removeDuplicates = function(nums) {
     }
 	return nums;
 };
-function compareNumeric(a, b) {
-	if (a > b) return 1;
-	if (a == b) return 0;
-	if (a < b) return -1;
-  }
+module.exports = removeDuplicates
 module.exports = union;
