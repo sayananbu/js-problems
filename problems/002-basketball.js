@@ -16,12 +16,17 @@
  * @returns {(number|undefined)}
  */
 function getWinner(points) {
-	let [first,second] = [0,0]
-	points.forEach(point=>{
-		let [f,s] = point.split('-')
-		first+= +f
-		second+= +s 
-	})
-    return first > second ? 1 : first === second ? undefined : 2 
+	let score = points.map(item=>{
+		let [left,right] = item.split('-')
+		return left-right
+	}).reduce((sum,val)=>sum+=val)
+	return score === 0 ? undefined : score > 0 ? 1 : 2
+	// let [first,second] = [0,0]
+	// points.forEach(point=>{
+	// 	let [f,s] = point.split('-')
+	// 	first+= +f
+	// 	second+= +s 
+	// })
+    // return first > second ? 1 : first === second ? undefined : 2 
 }
 module.exports = getWinner;
