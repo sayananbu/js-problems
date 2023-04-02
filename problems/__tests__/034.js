@@ -1,4 +1,4 @@
-const oddSort = require('../034-yandex-task');
+const check = require('../034-yandex-task');
 
 test('Тестирование задачи "034-yandex-task"', () => {
     expect(check(1, 1)).toBe(true);
