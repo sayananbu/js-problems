@@ -48,10 +48,9 @@
 function hasCircularDependency(servicesMap){
 	let keys = Object.keys(servicesMap)
 	if(keys.length < 1) return false
-	let deps = new Set(Object.values(servicesMap).flat(Infinity))
-	if(keys.length !== deps.size) return false
+	let deps = Object.values(servicesMap).flat(Infinity)
 	for(let key of keys){
-		if(!deps.has(key)) return false
+		if(!deps.includes(key)) return false
 	}
 	return true
 }
