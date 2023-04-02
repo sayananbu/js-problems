@@ -11,7 +11,6 @@
  * @param {string} value
  * @returns {string}
  */
-const anagram = require('./018-anagram');
 const anagramCheck = require('./018-anagram')
 function searchAnagrams(value) {
 	if(value === '') return ''
