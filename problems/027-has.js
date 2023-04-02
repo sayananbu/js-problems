@@ -14,7 +14,7 @@
  */
 function has(path, object) {
 	for(let key of path){
-		let isIn = object != null && hasOwnProperty.call(object, key)
+		let isIn = object != null && hasOwnProperty.call(object, key) 
 		if(!isIn) return false
 	}
 	return true
